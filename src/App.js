@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import * as ROUTES from './constants/routes'
 import Spinner from "./components/spinner/spinner.component";
 import { useDarkMode } from "./services/useDarkMode.service";
+import { Header } from "./components/header/header.component";
 
 const HomePage = lazy(() => import('./pages/home.page'))
 const AddPage = lazy(() => import('./pages/add.page'))
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <Suspense fallback={<Spinner />}>
+      <Header />
         <Switch>
           <Route path={ROUTES.HOME} exact >
             <HomePage />
