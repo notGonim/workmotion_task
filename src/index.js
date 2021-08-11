@@ -8,13 +8,16 @@ import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux'
 import store from '../src/store/store'
+import { ThemeProvider } from './store/theme/theme.context';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

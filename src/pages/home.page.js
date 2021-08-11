@@ -1,9 +1,10 @@
 import React from 'react'
+import { Header } from '../components/header/header.component'
 
-export default function  HOMEPAGE ()  {
+export default function HOMEPAGE() {
     return (
-        <div>
-            home page
-        </div>
+        <>
+            <Header />
+        </>
     )
 }
