@@ -6,7 +6,7 @@ export const Employee = () => {
 
     const [showModel, setShowModel] = useState(false)
 
-    const onShowModel=()=>{
+    const onShowModel = () => {
         setShowModel(prev => !prev)
     }
 
@@ -16,8 +16,10 @@ export const Employee = () => {
             <div className="py-4 px-36 w-screen font-Poppins">
                 <div className=" bg-white shadow rounded p-6">
                     <div className="flex justify-end items-center">
-                        <button type="button" onClick={onShowModel} className="bg-green-600 hover:bg-green-700 mr-1 focus:outline-none focus:ring-2  text-white font-bold py-2 px-4 rounded ">Update</button>
-                        <button className="bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2  text-white font-bold py-2 px-4 rounded ">Delete</button>
+                        <button type="button" onClick={onShowModel} className="bg-transparent hover:bg-green-500 mr-2 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded"
+                        >Update</button>
+                        <button className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+                        >Delete</button>
                     </div>
                     <div className="mt-6 flex">
                         <div className="w-10 flex flex-col items-center">
@@ -46,7 +48,7 @@ export const Employee = () => {
                     </div>
                 </div>
             </div>
-            <UpdateForm  showModel={showModel} setShowModel={setShowModel} />
+            <UpdateForm showModel={showModel} setShowModel={setShowModel} />
 
         </>
     )
