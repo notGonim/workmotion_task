@@ -1,9 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 
 import { UilAlignJustify } from '@iconscout/react-unicons'
-import { UilPlus } from '@iconscout/react-unicons'
 import { UilBrightness } from '@iconscout/react-unicons'
-import { UilSetting } from '@iconscout/react-unicons'
 import { UilPizzaSlice } from '@iconscout/react-unicons'
 import ThemeContext from '../../store/theme/theme.context'
 import { Link } from 'react-router-dom'
@@ -30,14 +28,11 @@ export const Header = () => {
                     <ul className="hidden sm:flex flex-1 justify-end items-center font-bold gap-12 uppercase text-blue-700 text-lg">
                         <li className="cursor-pointer dark:text-white" onClick={onChangeTheme}>  {darkMode ? <UilPizzaSlice /> : <UilBrightness />}</li>
                     </ul>
-
                 </nav>
                 <div className="flex sm:hidden  flex-1 justify-end">
                     <UilAlignJustify />
                 </div>
             </header>
-
         </>
-
     )
 }
