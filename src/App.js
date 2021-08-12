@@ -26,6 +26,7 @@ function App() {
           <Route path={ROUTES.ADD} exact >
             <AddPage />
           </Route>
+        
         </Switch>
       </Suspense>
     </Router>
