@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import UpdateForm from '../../overlay/overlay.component'
 
 
-export const Employee = () => {
+export const Employee = ({ key, id, name, username, email, address, phone, website, company }) => {
 
     const [showModel, setShowModel] = useState(false)
 
@@ -29,19 +29,19 @@ export const Employee = () => {
                             </div>
                         </div>
                         <div className="pl-3">
-                            <p className="text-sm font-semibold leading-normal text-gray-800">Bret</p>
-                            <p className="text-xs leading-3 text-gray-500 pt-1">Leanne Graham</p>
+                            <p className="text-sm font-semibold leading-normal text-gray-800">{username}</p>
+                            <p className="text-xs leading-3 text-gray-500 pt-1">{name}</p>
                             <p className="pt-4 text-sm leading-4 text-gray-600">
-                                Email :  <span className="text-indigo-700">Sincere@april.biz</span><br />
+                                Email :  <span className="text-indigo-700">{email}</span><br />
                             </p>
                             <p className="pt-4 text-sm leading-4 text-gray-600">
-                                Company :  <span className="text-indigo-700">Romaguera-Crona</span><br />
+                                Company :  <span className="text-indigo-700">{company}</span><br />
                             </p>
                             <p className="pt-4 text-sm leading-4 text-gray-600">
-                                Phone :  <span className="text-indigo-700">1-770-736-8031 x56442</span><br />
+                                Phone :  <span className="text-indigo-700">{phone}</span><br />
                             </p>
                             <p className="pt-4 text-sm leading-4 text-gray-600">
-                                Address :  <span className="text-indigo-700">Kulas Light</span><br />
+                                Address :  <span className="text-indigo-700">{address}</span><br />
                             </p>
 
                         </div>
