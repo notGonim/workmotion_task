@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { DeleteEmployee } from '../../../store/employees/employees-actions'
 import UpdateForm from '../../overlay/overlay.component'
 
 
 export const Employee = ({ key, id, name, username, email, address, phone, website, company }) => {
-
     const [showModel, setShowModel] = useState(false)
-
+    const dispatch = useDispatch()
+    const onDelete = () => {
+        dispatch(DeleteEmployee(id))
+    }
     const onShowModel = () => {
         setShowModel(prev => !prev)
     }
@@ -18,7 +22,7 @@ export const Employee = ({ key, id, name, username, email, address, phone, websi
                     <div className="flex justify-end items-center">
                         <button type="button" onClick={onShowModel} className="bg-transparent hover:bg-green-500 mr-2 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded"
                         >Update</button>
-                        <button className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+                        <button onClick={onDelete} className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
                         >Delete</button>
                     </div>
                     <div className="mt-6 flex">
